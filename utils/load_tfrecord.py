@@ -4,7 +4,7 @@ import tensorflow as tf
 #img_batch, label_batch = tf.train.shuffle_batch([img, label],
 #                                                batch_size=30, capacity=2000,
 #                                                min_after_dequeue=1000)
-#init = tf.initialize_all_variables()
+#init = tf.global_variables_initializer()
 #with tf.Session() as sess:
 #    sess.run(init)
 #    threads = tf.train.start_queue_runners(sess=sess)
