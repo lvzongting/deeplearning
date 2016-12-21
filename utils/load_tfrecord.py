@@ -1,6 +1,16 @@
 import tensorflow as tf 
 #from utils.load_tfrecord import *
 #img, label = load_tfrecord("train.tfrecord")
+#img_batch, label_batch = tf.train.shuffle_batch([img, label],
+#                                                batch_size=30, capacity=2000,
+#                                                min_after_dequeue=1000)
+#init = tf.initialize_all_variables()
+#with tf.Session() as sess:
+#    sess.run(init)
+#    threads = tf.train.start_queue_runners(sess=sess)
+#    for i in range(3):
+#        val, l= sess.run([img_batch, label_batch])
+#        print(val.shape, l)
 
 def load_tfrecord(filename):                                                                                                                      
     #gen queue from filename list
