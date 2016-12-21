@@ -24,6 +24,8 @@ for index,[root, dirs, files] in enumerate(os.walk('.')):
         #227,227 is the size of Alexnet
         print root + '/' +sample
         img = Image.open(root + '/' +sample)
+        if img.mode != 'RGB':
+            img = img.convert('RGB')
         img = img.resize((227,227)).tobytes()
         example = tf.train.Example(features=tf.train.Features(feature={
             "label": tf.train.Feature(int64_list=tf.train.Int64List(value=[index])),
