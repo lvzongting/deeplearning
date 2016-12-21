@@ -1,4 +1,6 @@
 import tensorflow as tf 
+#from utils.load_tfrecord import *
+#img, label = load_tfrecord("train.tfrecord")
 
 def load_tfrecord(filename):                                                                                                                      
     #gen queue from filename list
