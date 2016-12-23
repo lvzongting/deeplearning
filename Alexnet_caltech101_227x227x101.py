@@ -190,10 +190,8 @@ tr_img_batch, tr_label_batch = tf.train.shuffle_batch([tr_img, ts_label],batch_s
 ts_img_batch, ts_label_batch = tf.train.shuffle_batch([ts_img, ts_label],batch_size=200,capacity=2000,min_after_dequeue=1000)
 
 sess = tf.Session()
-try:
-    sess.run(tf.global_variables_initializer())
-except:
-    sess.run(tf.initialize_all_variables())
+try:     sess.run(tf.global_variables_initializer())
+except:  sess.run(tf.initialize_all_variables())
 threads = tf.train.start_queue_runners(sess=sess)
 
 print 'loading ts_batch'
