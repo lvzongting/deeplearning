@@ -5,6 +5,6 @@
 
 # 数据库 Dataset as tfrecords form
 ##Caltech101
-+ files: train28x28.tfrecord test28x28.tfrecord train.tfrecord test.tfrecord
++ files: train28x28.tfrecords test28x28.tfrecords train.tfrecords test.tfrecords
 + 生成脚本 [utils/save_dirs_to_tfrecords.py] [utils/save_dirs_to_tfrecords_28x28.py]
 + google drive[https://drive.google.com/open?id=0B7Wy478uBsx8YWpLWEQyLVVQRjA]
