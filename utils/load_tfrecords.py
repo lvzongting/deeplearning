@@ -12,7 +12,7 @@ import tensorflow as tf
 #        val, l= sess.run([img_batch, label_batch])
 #        print(val.shape, l)
 
-def load_tfrecord(filename):                                                                                                                      
+def load_tfrecords(filename):                                                                                                                      
     #gen queue from filename list
     filename_queue = tf.train.string_input_producer([filename])
     reader = tf.TFRecordReader()
