@@ -1,6 +1,6 @@
 import tensorflow as tf
 
-def load_tfrecord(filename):
+def load_tfrecords(filename):
     #gen queue from filename list
     filename_queue = tf.train.string_input_producer([filename])
     reader = tf.TFRecordReader()
