@@ -146,7 +146,7 @@ pool5_flat = tf.reshape(pool5,shape=[-1,6*6*256])
 w_fc6   = tf.constant(net_data['fc6'][0],shape=net_data['fc6'][0].shape)
 b_fc6   = tf.constant(net_data['fc6'][1],shape=net_data['fc6'][1].shape)
 fc6     = tf.nn.relu(tf.matmul(pool5_flat,w_fc6)+b_fc6)
-fc6     = tf.nn.dropout(fc6,keep_prob)
+#fc6     = tf.nn.dropout(fc6,keep_prob)
 #fc6.get_shape()=[None,4096]
 
 #.fc(4096, name='fc7')
