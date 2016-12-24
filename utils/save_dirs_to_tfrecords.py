@@ -19,8 +19,8 @@ rate = 1.0/2
 train = True ; test = False
 #train = False; test = True
 
-if train: record = tf.python_io.TFRecordWriter('train.tfrecord')
-if test : record = tf.python_io.TFRecordWriter('test.tfrecord')
+if train: record = tf.python_io.TFRecordWriter('train.tfrecords')
+if test : record = tf.python_io.TFRecordWriter('test.tfrecords')
 for index,[root, dirs, files] in enumerate(os.walk('.')):
     if index == 0:
         classes = dirs
