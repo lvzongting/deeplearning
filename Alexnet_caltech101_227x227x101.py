@@ -1,5 +1,5 @@
 import tensorflow as tf
-from utils.load_tfrecord import *
+from utils.load_tfrecords import *
 from numpy import *
 
 net_data = load("model/bvlc_alexnet.npy").item()
@@ -180,13 +180,13 @@ cross_entropy = tf.reduce_mean(-tf.reduce_sum(y_ * tf.log(y),reduction_indices=[
 train_step    = tf.train.AdamOptimizer(0.001).minimize(cross_entropy)
 accuracy      = tf.reduce_mean(tf.cast(tf.equal(tf.argmax(y,1),tf.argmax(y_,1)),tf.float32))
 
-#for tr_num,_ in  enumerate(tf.python_io.tf_record_iterator("caltech101/train.tfrecord")):pass
-#for ts_num,_ in  enumerate(tf.python_io.tf_record_iterator("caltech101/test.tfrecord" )):pass
+#for tr_num,_ in  enumerate(tf.python_io.tf_record_iterator("caltech101/train.tfrecords")):pass
+#for ts_num,_ in  enumerate(tf.python_io.tf_record_iterator("caltech101/test.tfrecords" )):pass
 tr_num = 4410; ts_num = 4265
 
-tr_img, tr_label = load_tfrecord("caltech101/train.tfrecord")
-ts_img, ts_label = load_tfrecord("caltech101/test.tfrecord" )
-tr_img_batch, tr_label_batch = tf.train.shuffle_batch([tr_img, ts_label],batch_size=300,   capacity=2000,min_after_dequeue=1000)
+tr_img, tr_label = load_tfrecords("caltech101/train.tfrecords")
+ts_img, ts_label = load_tfrecords("caltech101/test.tfrecords" )
+tr_img_batch, tr_label_batch = tf.train.shuffle_batch([tr_img, ts_label],batch_size=300,capacity=2000,min_after_dequeue=1000)
 ts_img_batch, ts_label_batch = tf.train.shuffle_batch([ts_img, ts_label],batch_size=200,capacity=2000,min_after_dequeue=1000)
 
 sess = tf.Session()
