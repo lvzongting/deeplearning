@@ -6,7 +6,7 @@
 
 ## RNN & lstm网络
 + 手写数字识别[lstm_mnist_28x28x10.py]
-
++ Caltech101分类-灰度[lstm_caltech_227x227x101L.py]
 
 # 数据库 Dataset as tfrecords form
 ##Caltech101
