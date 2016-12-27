@@ -4,9 +4,18 @@
 + 代码[http://www.cs.toronto.edu/~guerzhoy/tf_alexnet/myalexnet.py]
 + 模型参数 bvlc_alexnet.npy[https://drive.google.com/open?id=0B7Wy478uBsx8eTI4OTVOeGxtcVE]
 
-## RNN & lstm网络
+## RNN & lstm 网络
 + 手写数字识别[lstm_mnist_28x28x10.py]
 + Caltech101分类-灰度[lstm_caltech_227x227x101L.py]
+
+##Generative Adversarial Networks 网络
++ Ian Goodfellow--2016talk [https://www.youtube.com/watch?v=HN9NRhm9waY]
+
+##Deep Belief Networks
++ 文档[http://deeplearning.net/tutorial/DBN.html]
+
+##Deep Residual Networks
++ He Kaiming----MSRA 2015 [https://github.com/KaimingHe/deep-residual-networks]
 
 # 数据库 Dataset as tfrecords form
 ##Caltech101
