@@ -10,6 +10,7 @@
 
 ##Generative Adversarial Networks 网络
 + Ian Goodfellow--2016talk [https://www.youtube.com/watch?v=HN9NRhm9waY]
++ Ian Goodfellow--Review by Max Strakhov [https://github.com/tensorflow/magenta/blob/master/magenta/reviews/GAN.md]
 
 ##Deep Belief Networks
 + 文档[http://deeplearning.net/tutorial/DBN.html]
