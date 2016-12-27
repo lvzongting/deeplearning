@@ -10,9 +10,15 @@
 + 图片生成 -- DRAW: A Recurrent Neural Network For Image Generation by Gregor et al. (Review by Tim Cooijmans)[https://github.com/tensorflow/magenta/blob/master/magenta/reviews/draw.md]
 + 序列生成 -- Generating Sequences with Recurrent Neural Networks by Graves. (Review by David Ha)[https://github.com/tensorflow/magenta/blob/master/magenta/reviews/summary_generation_sequences.md]
 
+## Pixel RNN
++ 笔记 Pixel Recurrent Neural Networks by Van den Oord et al. (Review by Kyle Kastner)[https://github.com/tensorflow/magenta/blob/master/magenta/reviews/pixelrnn.md]
++ 代码 [https://github.com/carpedm20/pixel-rnn-tensorflow]
++ 论文 [https://arxiv.org/abs/1601.06759] 
+
 ##Generative Adversarial Networks 网络
 + Ian Goodfellow--2016talk [https://www.youtube.com/watch?v=HN9NRhm9waY]
 + Ian Goodfellow--Review by Max Strakhov [https://github.com/tensorflow/magenta/blob/master/magenta/reviews/GAN.md]
++ Improved Techniques for Training GANs [https://arxiv.org/abs/1606.03498]
 
 ##Deep Belief Networks
 + 文档[http://deeplearning.net/tutorial/DBN.html]
