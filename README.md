@@ -32,3 +32,9 @@
 + files: train28x28.tfrecords test28x28.tfrecords train.tfrecords test.tfrecords
 + 生成脚本 [utils/save_dirs_to_tfrecords.py] [utils/save_dirs_to_tfrecords_28x28.py]
 + google drive[https://drive.google.com/open?id=0B7Wy478uBsx8YWpLWEQyLVVQRjA]
+
+# Topic
+##生成艺术品和音乐 Magenta
++ 主页 [https://github.com/tensorflow/magenta]
++ 相关论文 [https://github.com/tensorflow/magenta/tree/master/magenta/reviews]
+
