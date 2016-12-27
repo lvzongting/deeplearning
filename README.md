@@ -16,6 +16,7 @@
 
 ##Deep Residual Networks
 + He Kaiming----MSRA 2015 [https://github.com/KaimingHe/deep-residual-networks]
++ He Kaiming----CVPR 2016 [https://www.youtube.com/watch?v=C6tLw-rPQ2o]
 
 # 数据库 Dataset as tfrecords form
 ##Caltech101
