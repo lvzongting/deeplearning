@@ -1,5 +1,5 @@
 import tensorflow as tf
-from utils.load_tfrecords2 import *
+from utils.load_tfrecords_28x28x1 import *
 
 x = tf.placeholder(tf.float32, shape=[None, 28, 28, 1])
 y0= tf.placeholder(tf.int32, shape=[None])
