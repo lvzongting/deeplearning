@@ -1,5 +1,5 @@
 import tensorflow as tf
-from utils.load_tfrecords import *
+from utils.load_tfrecords_227x227x3 import *
 from numpy import *
 
 net_data = load("model/bvlc_alexnet.npy").item()
