@@ -1,5 +1,5 @@
 import tensorflow as tf
-from utils.load_tfrecords3 import *
+from utils.load_tfrecords_227x227x1 import *
 
 
 #x.shape = [-1,227,227]
