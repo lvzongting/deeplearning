@@ -8,7 +8,7 @@ from itertools import *
 
 '''
 data, batch  = pickle.load(open('train.pkl'))
-img,  labels = batch(data,50)
+img,  labels = batch(data,0,50)
 print img.shape, labels.shape
 '''
 
@@ -22,8 +22,8 @@ if test:  labels = scipy.io.loadmat('test_32x32.mat' )['y']
 
 imgs  = np.transpose(imgs,[3,0,1,2])
 data  = [imgs,labels]
-batch = lambda x,y:[np.asarray(list(islice(cycle(x[0]),0,y))),
-                    np.asarray(list(islice(cycle(x[1]),0,y)))]                        
+batch = lambda x,i,j:[np.asarray(list(islice(cycle(x[0]),i,j))),
+                      np.asarray(list(islice(cycle(x[1]),i,j)))]                        
 print('start dump')
 if train: pickle.dump([data,batch],open('train.pkl','w'))
 if test:  pickle.dump([data,batch],open('test.pkl' ,'w'))
