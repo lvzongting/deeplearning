@@ -19,6 +19,7 @@
 + Ian Goodfellow--2016talk [https://www.youtube.com/watch?v=HN9NRhm9waY]
 + Ian Goodfellow--Review by Max Strakhov [https://github.com/tensorflow/magenta/blob/master/magenta/reviews/GAN.md]
 + Improved Techniques for Training GANs [https://arxiv.org/abs/1606.03498]
++ 各种GAN改进的概览--CGAN-LAPGAN-DCGAN-GRAN-VAEGAN-- [http://chuansong.me/n/317902651864] 
 
 ## DCGAN 生成网络
 + Image Completion with Deep Learning in TensorFlow ---- Brandon Amos [https://bamos.github.io/2016/08/09/deep-completion/]
