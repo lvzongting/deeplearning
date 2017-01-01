@@ -24,6 +24,7 @@
 + Image Completion with Deep Learning in TensorFlow ---- Brandon Amos [https://bamos.github.io/2016/08/09/deep-completion/]
 + Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks[https://arxiv.org/abs/1511.06434]
 + DCGAN - How does it work? [https://www.youtube.com/watch?v=VAeEt9df-hQ]
++ DCGAN with SVHN dataset github code [https://github.com/shuyo/iir/blob/master/dnn/dcgan-svhn.py]
 
 ##Deep Belief Networks
 + 文档[http://deeplearning.net/tutorial/DBN.html]
