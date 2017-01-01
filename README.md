@@ -20,6 +20,11 @@
 + Ian Goodfellow--Review by Max Strakhov [https://github.com/tensorflow/magenta/blob/master/magenta/reviews/GAN.md]
 + Improved Techniques for Training GANs [https://arxiv.org/abs/1606.03498]
 
+## DCGAN 生成网络
++ Image Completion with Deep Learning in TensorFlow ---- Brandon Amos [https://bamos.github.io/2016/08/09/deep-completion/]
++ Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks[https://arxiv.org/abs/1511.06434]
++ DCGAN - How does it work? [https://www.youtube.com/watch?v=VAeEt9df-hQ]
+
 ##Deep Belief Networks
 + 文档[http://deeplearning.net/tutorial/DBN.html]
 
