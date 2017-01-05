@@ -1,5 +1,6 @@
 import tensorflow as tf
 from utils.load_tfrecords_32x32x3 import *
+from utils.save_fig import *
 import numpy as np
 import math
 
@@ -68,8 +69,8 @@ Gloss   =  tf.reduce_mean(tf.log(1-DG)- tf.log(DG+1e-6))
 #Gloss   = -tf.reduce_mean(DG)
 Dvars   = [v for v in tf.trainable_variables() if v.name.startswith('D')]
 Gvars   = [v for v in tf.trainable_variables() if v.name.startswith('G')]
-trainD  = tf.train.AdamOptimizer(1e-3).minimize(Dloss, var_list=Dvars)
-trainG  = tf.train.AdamOptimizer(1e-3).minimize(Gloss, var_list=Gvars)
+trainD  = tf.train.AdamOptimizer(2e-4).minimize(Dloss, var_list=Dvars)
+trainG  = tf.train.AdamOptimizer(2e-4).minimize(Gloss, var_list=Gvars)
 
 tr_img, tr_label = load_tfrecords('svhn/train.tfrecords')
 ts_img, ts_label = load_tfrecords('svhn/test.tfrecords')
@@ -89,35 +90,29 @@ theards = tf.train.start_queue_runners(sess=sess)
 #print ts_batch[0].shape,ts_batch[1].shape
 #print('Done!')
 ndloss=ngloss=0.0
-for i in range(20000):
+drawZ = np.random.uniform(-1,1,size=(batch_size,100))
+for i in range(60000):
     z = np.random.uniform(-1,1,size=(batch_size,100))
     tr_batch = sess.run([tr_batch_img, tr_batch_label])
     #print z.shape,type(z)
     dloss,_ = sess.run([Dloss,trainD],feed_dict={X:tr_batch[0],Z:z})
-    ndloss += dloss
-    print(str(i)+'dloss:'+str(dloss)+'/'+str(ndloss))
+    #ndloss += dloss
+    #if i%10 == 0: print(str(i)+'dloss:'+str(dloss)+'/'+str(ndloss))
     z = np.random.uniform(-1,1,size=(batch_size,100))
     gloss,_ = sess.run([Gloss,trainG],feed_dict={Z:z})
-    ngloss += gloss
-    print(str(i)+'gloss:'+str(gloss)+'/'+str(ngloss))
+    #ngloss += gloss
+    #if i%10 == 0: print(str(i)+'gloss:'+str(gloss)+'/'+str(ngloss))
+    if i%50  == 0: print(str(i)+'\tgloss:'+str(gloss)+'\tdloss:'+str(dloss))
+    if i%600 == 0: 
+        drawG = sess.run(G,feed_dict={Z:drawZ})
+        print('saving... %03d.png'% (i/600))
+        save_fig('svhn/dcgan-svhn-%03d.png' % (i/600), drawG)
 
-    if  math.isnan(ndloss) or math.isnan(ngloss) or ngloss>1000:
+    if math.isnan(dloss) or math.isnan(gloss) :
         print('...initialize parameters for nan...')
         sess.run(tf.global_variables_initializer())
         ndloss=ngloss=0.0
 
-#import matplotlib.pyplot as plt
-#import numpy as np
-#g = sess.run(G,feed_dict={Z:z})
-#fig = plt.gcf()
-#fig.subplots_adjust(left=0,bottom=0,right=1,top=1)
-#for i in range(batch_size):
-#      ax = fig.add_subplot(10, np.ceil(batch_size/10.0), i + 1)
-#      ax.axis("off")
-#      ax.imshow(g[i,:,:,:])
-#plt.savefig('.')
-#plt.draw()
-#plt.pause(0.01)
 
 
 
