@@ -26,6 +26,7 @@
 + Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks[https://arxiv.org/abs/1511.06434]
 + DCGAN - How does it work? [https://www.youtube.com/watch?v=VAeEt9df-hQ]
 + DCGAN with SVHN dataset github code [https://github.com/shuyo/iir/blob/master/dnn/dcgan-svhn.py]
++ 代码 [dcgan_svhn_32x32x3.py]
 
 ##Deep Belief Networks
 + 文档[http://deeplearning.net/tutorial/DBN.html]
