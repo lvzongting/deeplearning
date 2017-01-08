@@ -59,7 +59,7 @@
 + 主页 [https://github.com/tensorflow/magenta]
 + 相关论文 [https://github.com/tensorflow/magenta/tree/master/magenta/reviews]
 
-#lecture
+#Lecture
 ## Yann LeCun Informatics and Computational Sciences (2015-2016)
 + Yann LeCun Lecture 1/8 Why Deep Learning ? [https://www.youtube.com/watch?v=ChLEJA6J2b8]
 + Yann LeCun Lecture 2/8 Multilayered Networks and Gradient-based Backpropagation [https://www.youtube.com/watch?v=oX58hCamkwM]
@@ -78,5 +78,9 @@
 + 主页 https://berkeley-deep-learning.github.io/cs294-dl-f16/
 + Oriol Vinyals: Sequences and one-shot learning 相关视频 Stanford Seminar - Recent Advances in Deep Learning [https://www.youtube.com/watch?v=UAq961jQjYg]
 
+##周莫烦 python和tensorflow的快速教程
++ youtube playlist [https://www.youtube.com/playlist?list=PLXO45tsB95cKI5AIlf5TxxFPzb-0zeVZ8]
 
-
+##Reinforcement learning by David Silver ---- Deepmind
++ youtube playlist [https://www.youtube.com/playlist?list=PL7-jPKtc4r78-wCZcQn5IqyuWhBZ8fOxT]
++ Lecture 笔记和课件 [http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html]
