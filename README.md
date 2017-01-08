@@ -18,9 +18,9 @@
 ## Matching Networks for One Shot Learning
 + 论文 Matching Networks for One Shot Learning [https://arxiv.org/abs/1606.04080]
 + 笔记 [https://github.com/karpathy/paper-notes/blob/master/matching_networks.md]
-+ 代码 [https://github.com/zergylord/oneshot]
-
-
++ 代码 code with tensorflow [https://github.com/zergylord/oneshot]
++ 代码 code with theano [https://github.com/tristandeleu/ntm-one-shot]
+ 
 ##Generative Adversarial Networks 网络
 + Ian Goodfellow--2016talk [https://www.youtube.com/watch?v=HN9NRhm9waY]
 + Ian Goodfellow--Review by Max Strakhov [https://github.com/tensorflow/magenta/blob/master/magenta/reviews/GAN.md]
