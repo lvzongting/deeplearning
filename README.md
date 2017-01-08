@@ -20,6 +20,8 @@
 + 笔记 [https://github.com/karpathy/paper-notes/blob/master/matching_networks.md]
 + 代码 code with tensorflow [https://github.com/zergylord/oneshot]
 + 代码 code with theano [https://github.com/tristandeleu/ntm-one-shot]
++ 双向lstm bidirectional-lstm 代码 [https://github.com/hycis/bidirectional_RNN]
++ set to set lstm 论文 order matters sequence to sequence for sets [https://arxiv.org/abs/1511.06391]
  
 ##Generative Adversarial Networks 网络
 + Ian Goodfellow--2016talk [https://www.youtube.com/watch?v=HN9NRhm9waY]
