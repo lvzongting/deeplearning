@@ -23,6 +23,7 @@
 + 双向lstm bidirectional-lstm 代码 [https://github.com/hycis/bidirectional_RNN]
 + sequence to sequence lstm 笔记 [https://github.com/jxieeducation/DIY-Data-Science/blob/master/research/seq2seq.md]
 + set to set lstm 论文 order matters sequence to sequence for sets [https://arxiv.org/abs/1511.06391]
++ pointer network 代码[https://github.com/pradyu1993/seq2set-keras] 讲解 [http://pradyu1993.github.io/2016/10/03/ptr-net-post.html]
  
 ##Generative Adversarial Networks 网络
 + Ian Goodfellow--2016talk [https://www.youtube.com/watch?v=HN9NRhm9waY]
