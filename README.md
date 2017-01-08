@@ -23,8 +23,15 @@
 + 双向lstm bidirectional-lstm 代码 [https://github.com/hycis/bidirectional_RNN]
 + sequence to sequence lstm 笔记 [https://github.com/jxieeducation/DIY-Data-Science/blob/master/research/seq2seq.md]
 + set to set lstm 论文 order matters sequence to sequence for sets [https://arxiv.org/abs/1511.06391]
++ 笔记 Order Matters: Sequence To Sequence For Sets [https://lschacker.gitbooks.io/running-paper/content/order_matters_sequence_to_sequence_for_sets.html]
 + pointer network 代码[https://github.com/pradyu1993/seq2set-keras] 讲解 [http://pradyu1993.github.io/2016/10/03/ptr-net-post.html]
- 
+
+##Reasoning, Attention, Memory
++ 自然语言处理中的Attention Model：是什么及为什么 [http://blog.csdn.net/malefactor/article/details/50550211]
++ Attention based model 是什么，它解决了什么问题？[https://www.zhihu.com/question/36591394]
++ 一些attention的例子,图片分类,生成,生成主题 [http://www.cosmosshadow.com/ml/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/2016/03/08/Attention.html]
+
+
 ##Generative Adversarial Networks 网络
 + Ian Goodfellow--2016talk [https://www.youtube.com/watch?v=HN9NRhm9waY]
 + Ian Goodfellow--Review by Max Strakhov [https://github.com/tensorflow/magenta/blob/master/magenta/reviews/GAN.md]
