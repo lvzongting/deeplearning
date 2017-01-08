@@ -59,3 +59,24 @@
 + 主页 [https://github.com/tensorflow/magenta]
 + 相关论文 [https://github.com/tensorflow/magenta/tree/master/magenta/reviews]
 
+#lecture
+## Yann LeCun Informatics and Computational Sciences (2015-2016)
++ Yann LeCun Lecture 1/8 Why Deep Learning ? [https://www.youtube.com/watch?v=ChLEJA6J2b8]
++ Yann LeCun Lecture 2/8 Multilayered Networks and Gradient-based Backpropagation [https://www.youtube.com/watch?v=oX58hCamkwM]
++ Yann LeCun Lecture 3/8 Deep Learning in Practice [https://www.youtube.com/watch?v=FWdybkCarv0]
++ Yann LeCun Lecture 4/8 Convolutional Neural Networks [https://www.youtube.com/watch?v=LrUYRwAJXKM]
++ Yann LeCun Lecture 5/8 Convolutional Networks and their Applications in Vision [https://www.youtube.com/watch?v=zHosOTMScnA]
++ Yann LeCun Lecture 6/8 Recurrent Neural Networks and their Applications in NLP [https://www.youtube.com/watch?v=C-ChIA009zk]
++ Yann LeCun Lecture 7/8 Reasoning, Attention, Memory [https://www.youtube.com/watch?v=TrV_PMPpQ6Q]
++ Yann LeCun Lecture 8/8 Unsupervised Learning [https://www.youtube.com/watch?v=RftTFBmOrrY&t=5254s]
+
+## CS294-129 Designing, Visualizing and Understanding Deep Neural Networks
++ 主页 [https://bcourses.berkeley.edu/courses/1453965/pages/cs294-129-designing-visualizing-and-understanding-deep-neural-networks]
++ youtube playlist [https://www.youtube.com/playlist?list=PLkFD6_40KJIxopmdJF_CLNqG3QuDFHQUm]
+
+## CS 294-131: Special Topics in Deep Learning 
++ 主页 https://berkeley-deep-learning.github.io/cs294-dl-f16/
++ Oriol Vinyals: Sequences and one-shot learning 相关视频 Stanford Seminar - Recent Advances in Deep Learning [https://www.youtube.com/watch?v=UAq961jQjYg]
+
+
+
