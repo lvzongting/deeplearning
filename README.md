@@ -15,6 +15,12 @@
 + 代码 [https://github.com/carpedm20/pixel-rnn-tensorflow]
 + 论文 [https://arxiv.org/abs/1601.06759] 
 
+## Matching Networks for One Shot Learning
++ 论文 Matching Networks for One Shot Learning [https://arxiv.org/abs/1606.04080]
++ 笔记 [https://github.com/karpathy/paper-notes/blob/master/matching_networks.md]
++ 代码 [https://github.com/zergylord/oneshot]
+
+
 ##Generative Adversarial Networks 网络
 + Ian Goodfellow--2016talk [https://www.youtube.com/watch?v=HN9NRhm9waY]
 + Ian Goodfellow--Review by Max Strakhov [https://github.com/tensorflow/magenta/blob/master/magenta/reviews/GAN.md]
