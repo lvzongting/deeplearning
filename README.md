@@ -28,7 +28,7 @@
 + DCGAN with SVHN dataset github code [https://github.com/shuyo/iir/blob/master/dnn/dcgan-svhn.py]
 + 代码 [dcgan_svhn_32x32x3.py]
 + 结果 [https://drive.google.com/open?id=0B7Wy478uBsx8ekhVbEVqeXU5cTA]
-+ 优化DCGAN网络  \论文  \ppt
++ 优化DCGAN网络 论文:Improved Techniques for Training GANs [https://arxiv.org/abs/1606.03498] 代码 [https://github.com/openai/improved-gan]  \ppt
 
 
 ##Deep Belief Networks
