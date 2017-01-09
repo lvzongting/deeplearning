@@ -47,6 +47,8 @@
 + 结果 [https://drive.google.com/open?id=0B7Wy478uBsx8ekhVbEVqeXU5cTA]
 + 优化DCGAN网络 论文:Improved Techniques for Training GANs [https://arxiv.org/abs/1606.03498] 代码 [https://github.com/openai/improved-gan]  \ppt
 
+##Unsupervised Domain Adaptation
++ 论文 Deep Reconstruction-Classification Networks for Unsupervised Domain Adaptation [https://arxiv.org/pdf/1607.03516v2.pdf]
 
 ##Deep Belief Networks
 + 文档[http://deeplearning.net/tutorial/DBN.html]
