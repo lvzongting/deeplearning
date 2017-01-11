@@ -35,6 +35,10 @@
 + 自然语言处理中的Attention Model：是什么及为什么 [http://blog.csdn.net/malefactor/article/details/50550211]
 + Attention based model 是什么，它解决了什么问题？[https://www.zhihu.com/question/36591394]
 + 一些attention的例子,图片分类,生成,生成主题 [http://www.cosmosshadow.com/ml/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/2016/03/08/Attention.html]
++ attention机制 attention mechanisms with tensorflow [http://www.slideshare.net/KeonKim/attention-mechanisms-with-tensorflow]
++ attention机制 论文 Effective Approaches to Attention-based Neural Machine Translation [http://www.aclweb.org/anthology/D15-1166]
++ 论文相关视频 12- effective approaches to attention-based neural machine translation [https://vimeo.com/162101582]
++ attention机制 代码 [https://github.com/lmthang/nmt.matlab] 
 
 
 ##Generative Adversarial Networks 网络
