@@ -37,7 +37,7 @@
 + 一些attention的例子,图片分类,生成,生成主题 [http://www.cosmosshadow.com/ml/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/2016/03/08/Attention.html]
 + attention机制 attention mechanisms with tensorflow [http://www.slideshare.net/KeonKim/attention-mechanisms-with-tensorflow]
 + attention机制 论文 Effective Approaches to Attention-based Neural Machine Translation [http://www.aclweb.org/anthology/D15-1166]
-+ 论文相关视频 12- effective approaches to attention-based neural machine translation [https://vimeo.com/162101582]
++ 论文相关视频 12- effective approaches to attention-based neural machine translation [https://www.youtube.com/watch?v=XvOKXJxDn1U][https://vimeo.com/162101582]
 + attention机制 代码 [https://github.com/lmthang/nmt.matlab] 
 
 
