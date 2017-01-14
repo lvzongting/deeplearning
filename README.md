@@ -30,6 +30,8 @@
 + set to set lstm 论文 order matters sequence to sequence for sets [https://arxiv.org/abs/1511.06391]
 + 笔记 Order Matters: Sequence To Sequence For Sets [https://lschacker.gitbooks.io/running-paper/content/order_matters_sequence_to_sequence_for_sets.html]
 + pointer network 代码[https://github.com/pradyu1993/seq2set-keras] 讲解 [http://pradyu1993.github.io/2016/10/03/ptr-net-post.html]
++ One-shot Learning with Memory-Augmented Neural Networks 论文 [https://arxiv.org/pdf/1605.06065v1.pdf] 代码 [https://github.com/tristandeleu/ntm-one-shot]
+
 
 ##Reasoning, Attention, Memory
 + 自然语言处理中的Attention Model：是什么及为什么 [http://blog.csdn.net/malefactor/article/details/50550211]
