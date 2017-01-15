@@ -76,6 +76,11 @@
 + 生成脚本 [utils/save_dirs_to_tfrecords.py] [utils/save_dirs_to_tfrecords_28x28.py]
 + google drive[https://drive.google.com/open?id=0B7Wy478uBsx8YWpLWEQyLVVQRjA]
 
+##Omniglot
++ 地址 [https://github.com/brendenlake/omniglot]
+
+
+
 # Topic
 ##生成艺术品和音乐 Magenta
 + 主页 [https://github.com/tensorflow/magenta]
