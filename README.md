@@ -25,7 +25,7 @@
 + 笔记 [https://github.com/karpathy/paper-notes/blob/master/matching_networks.md]
 + 代码 code with tensorflow [https://github.com/zergylord/oneshot]
 + 代码 code with theano [https://github.com/tristandeleu/ntm-one-shot]
-+ 双向lstm bidirectional-lstm 代码 [https://github.com/hycis/bidirectional_RNN]
++ 双向lstm bidirectional-lstm 代码 [https://github.com/aymericdamien/TensorFlow-Examples/blob/master/examples/3_NeuralNetworks/bidirectional_rnn.py]
 + sequence to sequence lstm 笔记 [https://github.com/jxieeducation/DIY-Data-Science/blob/master/research/seq2seq.md]
 + set to set lstm 论文 order matters sequence to sequence for sets [https://arxiv.org/abs/1511.06391]
 + 笔记 Order Matters: Sequence To Sequence For Sets [https://lschacker.gitbooks.io/running-paper/content/order_matters_sequence_to_sequence_for_sets.html]
