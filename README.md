@@ -121,6 +121,7 @@
 
 ##周莫烦 python和tensorflow的快速教程
 + youtube playlist [https://www.youtube.com/playlist?list=PLXO45tsB95cKI5AIlf5TxxFPzb-0zeVZ8]
++ udacity 经典课程  [https://classroom.udacity.com/courses/ud730/lessons/6370362152/concepts/63798118150923#]
 
 ##Reinforcement learning by David Silver ---- Deepmind
 + youtube playlist [https://www.youtube.com/playlist?list=PL7-jPKtc4r78-wCZcQn5IqyuWhBZ8fOxT]
