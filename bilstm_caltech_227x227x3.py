@@ -26,7 +26,7 @@ norm1   = tf.nn.local_response_normalization(conv1,depth_radius=2,alpha=2e-05,be
 pool1   = tf.nn.max_pool(norm1,ksize=[1,3,3,1],strides=[1,2,2,1],padding='VALID')
 #pool1.get_shape()=[None,27,27,96]
 
-fc0_batch= tf.reshape(pool2,[-1,27,27*48])
+fc0_batch= tf.reshape(pool1,[-1,27,27*48])
 
 cell_fw  = tf.nn.rnn_cell.BasicLSTMCell(1296,forget_bias=1)
 cell_bw  = tf.nn.rnn_cell.BasicLSTMCell(256,forget_bias=1)
