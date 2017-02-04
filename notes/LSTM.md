@@ -28,3 +28,25 @@ The concatenation of input & state is taken as cell_input of LSTM
 #[Line 503 python/ops/rnn_cell.py(class LSTMCell(RNNCell))] 
 cell_inputs = array_ops.concat(1, [inputs, m_prev]) 
 ```
+the state is h_{t-1} & q^\*_{t-1}, then feed  g_t & r_t as inputs.      
+All above are functions from state to seq, so use seq2seq.rnn_decoder(), additional loop_function modify the input within iteration.       
+```python
+def get_next_input(prev, i):
+  next = foo(prev)
+  return next
+  
+outputs, _ = seq2seq.rnn_decoder(inputs, init_state, lstm_cell, loop_function=get_next_input)
+```
+inputs is h_0 & g^\*_0
+
+##3
+full context embeddings in [Matching Networks for One Shot Learning NIPS 2016]     
+\hat{h_k}, c_k = LSTM(f^'(\hat{x}),[h_{k-1},r_{k-1}],c_{k-1})
+
+
+
+
+
+
+
+
