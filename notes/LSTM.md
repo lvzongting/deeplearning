@@ -41,7 +41,7 @@ inputs is h_0 & g^\*_0
 
 ##3
 full context embeddings in [Matching Networks for One Shot Learning NIPS 2016]     
-\hat{h_k}, c_k = LSTM(f^'(\hat{x}),[h_{k-1},r_{k-1}],c_{k-1})
+$$\hat{h_k}, c_k = LSTM(f^'(\hat{x}),[h_{k-1},r_{k-1}],c_{k-1})$$
 
 
 
