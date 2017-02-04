@@ -41,7 +41,36 @@ inputs is h_0 & g^\*_0
 
 ##3
 full context embeddings in [Matching Networks for One Shot Learning NIPS 2016]     
-$\hat{h_k}, c_k = LSTM(f^'(\hat{x}),[h_{k-1},r_{k-1}],c_{k-1})$
+\hat{h_k}, c_k    = LSTM(f^'(\hat{x}),[h_{k-1},r_{k-1}],c_{k-1})      
+h_k               = \hat{h_k} + f^'(\hat{x})     
+r_{k-1}           = sum_i{a(h_{k-1},g(x_i))g(x_i)}    
+a(h_{k-1},g(x_i)) = exp(h^T_{k-1}g(x_i))/sum_j{exp(h^T_{k-1}g(x_j))}     
+
+Above functions need to change both input & state, so need modify the rnn_decoder as rnn_decoder2
+```python
+def rnn_decoder2(decoder_inputs, initial_state, cell, loop_function=None,state_function=None,scope=None):
+    with variable_scope.variable_scope(scope or "rnn_decoder"):
+    state = initial_state
+    outputs = []
+    prev_input = None
+    prev_state = None
+    for i, inp in enumerate(decoder_inputs):
+        if loop_function  is not None and prev_input is not None:
+            with variable_scope.variable_scope("loop_function", reuse=True):
+            inp =  loop_function(prev_input, i)
+        if state_function is not None and prev_state is not None:
+            with variable_scope.variable_scope("state_function", reuse=True):
+            sta = state_function(prev_state, i)        
+        if i > 0:
+            variable_scope.get_variable_scope().reuse_variables()
+        #output, state = cell(inp, state)
+        output, state = cell(inp, sta)
+        outputs.append(output)
+        if loop_function is not None:
+            prev_input = output
+            prev_state = state
+    return outputs, state
+```
 
 
 
