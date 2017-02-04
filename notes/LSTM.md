@@ -57,14 +57,13 @@ def rnn_decoder2(decoder_inputs, initial_state, cell, loop_function=None,state_f
     for i, inp in enumerate(decoder_inputs):
         if loop_function  is not None and prev_input is not None:
             with variable_scope.variable_scope("loop_function", reuse=True):
-            inp =  loop_function(prev_input, i)
+            inp   =  loop_function(prev_input, i)
         if state_function is not None and prev_state is not None:
             with variable_scope.variable_scope("state_function", reuse=True):
-            sta = state_function(prev_state, i)        
+            state = state_function(prev_state, i)        
         if i > 0:
             variable_scope.get_variable_scope().reuse_variables()
-        #output, state = cell(inp, state)
-        output, state = cell(inp, sta)
+        output, state = cell(inp, state)
         outputs.append(output)
         if loop_function is not None:
             prev_input = output
