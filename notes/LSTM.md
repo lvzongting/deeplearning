@@ -5,6 +5,7 @@ h: output
 c: cell     
 LSTM has two layer: one is encoder dealing with input, the other is decoder dealing with output  
 ```python
+#[Line 175~177 in python/ops/seq2seq.py(def basic_rnn_seq2seq(...))]
 #encode
 _, enc_state  = tf.nn.rnn(cell, encoder_inputs, dtype=dtype)    
 
@@ -42,7 +43,7 @@ inputs is h_0 & g^\*_0
 ###addition
 The simplest form of RNN network generated is:      
 ```python
-#[line 76~83 in python/ops/rnn.py(def rnn(cell,...))]
+#[Line 76~83 in python/ops/rnn.py(def rnn(cell,...))]
 state = cell.zero_state(...)
 outputs = []
 for input_ in inputs:
@@ -61,6 +62,7 @@ a(h_{k-1},g(x_i)) = exp(h^T_{k-1}g(x_i))/sum_j{exp(h^T_{k-1}g(x_j))}
 h_k: state of LSTM, r_k: input of LSTM
 Above functions need to change both input & state, so need modify the rnn_decoder as rnn_decoder2
 ```python
+#[Line 136~150 in python/ops/seq2seq.py(def rnn_decoder(...))]
 def rnn_decoder2(decoder_inputs, initial_state, cell, loop_function=None,state_function=None,scope=None):
     with variable_scope.variable_scope(scope or "rnn_decoder"):
     state = initial_state
