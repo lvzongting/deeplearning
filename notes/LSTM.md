@@ -82,14 +82,14 @@ state = lstm.zero_state(batch_size=500,dtype=tf.float32)
 outputs = []
 prev_input = None
 prev_state = None
-for i,input in enumerate(lstm_inputs):
+for i,inp in enumerate(lstm_inputs):
     if i > 0:
         with variable_scope.variable_scope("input_function", reuse=True):
-        input = input_function(prev_input, i)
+        inp   = input_function(prev_input, i)
         with variable_scope.variable_scope("state_function", reuse=True):
         state = state_function(prev_state, i)
         variable_scope.get_variable_scope().reuse_variables()
-    output, state = lstm(input, state)
+    output, state = lstm(inp, state)
     outputs.append(output)
     prev_input = output
     prev_state = state   
