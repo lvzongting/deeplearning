@@ -39,7 +39,7 @@ outputs, _ = seq2seq.rnn_decoder(inputs, init_state, lstm_cell, loop_function=ge
 ```
 inputs is h_0 & g^\*_0
 
-##addition
+###addition
 The simplest form of RNN network generated is:      
 ```python
 #[line 76~83 in python/ops/rnn.py(def rnn(cell,...))]
