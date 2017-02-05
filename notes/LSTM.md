@@ -46,6 +46,7 @@ h_k               = \hat{h_k} + f^'(\hat{x})
 r_{k-1}           = sum_i{a(h_{k-1},g(x_i))g(x_i)}    
 a(h_{k-1},g(x_i)) = exp(h^T_{k-1}g(x_i))/sum_j{exp(h^T_{k-1}g(x_j))}     
 
+h_k: state of LSTM, r_k: input of LSTM
 Above functions need to change both input & state, so need modify the rnn_decoder as rnn_decoder2
 ```python
 def rnn_decoder2(decoder_inputs, initial_state, cell, loop_function=None,state_function=None,scope=None):
@@ -71,10 +72,25 @@ def rnn_decoder2(decoder_inputs, initial_state, cell, loop_function=None,state_f
     return outputs, state
 ```
 
+##4
+inline LSTM iteration as following:
+```python
+#in: lstm_input,out: outputs, state
+lstm  = tf.nn.rnn_cell.BasicLSTMCell(1024,forget_bias=1.0,state_is_tuple=True)
+state = lstm.zero_state(batch_size=500,dtype=tf.float32)
 
-
-
-
-
-
-
+outputs = []
+prev_input = None
+prev_state = None
+for i,input in enumerate(lstm_inputs):
+    if i > 0:
+        with variable_scope.variable_scope("input_function", reuse=True):
+        input = input_function(prev_input, i)
+        with variable_scope.variable_scope("state_function", reuse=True):
+        state = state_function(prev_state, i)
+        variable_scope.get_variable_scope().reuse_variables()
+    output, state = lstm(input, state)
+    outputs.append(output)
+    prev_input = output
+    prev_state = state   
+```
