@@ -42,13 +42,13 @@ inputs is h_0 & g^\*_0
 ##addition
 The simplest form of RNN network generated is:      
 ```python
-    #[line 76~83 in python/ops/rnn.py(def rnn(cell,...))]
-    state = cell.zero_state(...)
-    outputs = []
-    for input_ in inputs:
-      output, state = cell(input_, state)
-      outputs.append(output)
-    return (outputs, state)
+#[line 76~83 in python/ops/rnn.py(def rnn(cell,...))]
+state = cell.zero_state(...)
+outputs = []
+for input_ in inputs:
+    output, state = cell(input_, state)
+    outputs.append(output)
+return (outputs, state)
 ```
 
 ##3
