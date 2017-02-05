@@ -25,7 +25,7 @@ q^\*_t = [q_t r_t] &emsp;&emsp; #concatenate(q_t,r_t)
 
 The concatenation of input & state is taken as cell_input of LSTM     
 ```python
-#[Line 503 python/ops/rnn_cell.py(class LSTMCell(RNNCell))] 
+#[Line 503 in python/ops/rnn_cell.py(class LSTMCell(RNNCell))] 
 cell_inputs = array_ops.concat(1, [inputs, m_prev]) 
 ```
 the state is h_{t-1} & q^\*_{t-1}, then feed  g_t & r_t as inputs.      
@@ -38,6 +38,18 @@ def get_next_input(prev, i):
 outputs, _ = seq2seq.rnn_decoder(inputs, init_state, lstm_cell, loop_function=get_next_input)
 ```
 inputs is h_0 & g^\*_0
+
+##addition
+The simplest form of RNN network generated is:      
+```python
+    #[line 76~83 in python/ops/rnn.py(def rnn(cell,...))]
+    state = cell.zero_state(...)
+    outputs = []
+    for input_ in inputs:
+      output, state = cell(input_, state)
+      outputs.append(output)
+    return (outputs, state)
+```
 
 ##3
 full context embeddings in [Matching Networks for One Shot Learning NIPS 2016]     
