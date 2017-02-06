@@ -190,7 +190,7 @@ tr_num = 4410; ts_num = 4265
 
 tr_img, tr_label = load_tfrecords("caltech101/train.tfrecords")
 ts_img, ts_label = load_tfrecords("caltech101/test.tfrecords" )
-tr_img_batch, tr_label_batch = tf.train.shuffle_batch([tr_img, ts_label],batch_size=500,capacity=4000,min_after_dequeue=100)
+tr_img_batch, tr_label_batch = tf.train.shuffle_batch([tr_img, tr_label],batch_size=500, capacity=4000,min_after_dequeue=100)
 ts_img_batch, ts_label_batch = tf.train.shuffle_batch([ts_img, ts_label],batch_size=1000,capacity=2000,min_after_dequeue=100)
 
 sess = tf.Session()
