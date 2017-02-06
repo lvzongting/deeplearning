@@ -59,6 +59,8 @@
 + 代码 [dcgan_svhn_32x32x3.py]
 + 结果 [https://drive.google.com/open?id=0B7Wy478uBsx8ekhVbEVqeXU5cTA]
 + 优化DCGAN网络 论文:Improved Techniques for Training GANs [https://arxiv.org/abs/1606.03498] 代码 [https://github.com/openai/improved-gan]  \ppt
++ GAN网络的终极优化Wasserstein GAN 论文[https://arxiv.org/abs/1701.07875]  分析笔记[https://zhuanlan.zhihu.com/p/25071913]     
+
 
 ##Unsupervised Domain Adaptation
 + 论文 Deep Reconstruction-Classification Networks for Unsupervised Domain Adaptation [https://arxiv.org/pdf/1607.03516v2.pdf]
