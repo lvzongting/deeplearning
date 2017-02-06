@@ -45,7 +45,7 @@ tr_num = 1461; ts_num = 1445
 
 tr_img, tr_label = load_tfrecords("caltech101/train28x28.tfrecords")
 ts_img, ts_label = load_tfrecords("caltech101/test28x28.tfrecords" )
-tr_img_batch, tr_label_batch = tf.train.shuffle_batch([tr_img, ts_label],batch_size=500,   capacity=2000,min_after_dequeue=1000)
+tr_img_batch, tr_label_batch = tf.train.shuffle_batch([tr_img, tr_label],batch_size=500,   capacity=2000,min_after_dequeue=1000)
 ts_img_batch, ts_label_batch = tf.train.shuffle_batch([ts_img, ts_label],batch_size=ts_num,capacity=2000,min_after_dequeue=1000)
 
 sess = tf.Session()
