@@ -47,7 +47,7 @@ accuracy = tf.reduce_mean(tf.cast(tf.equal(tf.argmax(y_,1),tf.argmax(Y_,1)),tf.f
 
 tr_img, tr_label = load_tfrecords("caltech101/train.tfrecords")
 ts_img, ts_label = load_tfrecords("caltech101/test.tfrecords" )
-tr_img_batch, tr_label_batch = tf.train.shuffle_batch([tr_img, ts_label],batch_size=50,capacity=7500,min_after_dequeue=1000)
+tr_img_batch, tr_label_batch = tf.train.shuffle_batch([tr_img, tr_label],batch_size=50,capacity=7500,min_after_dequeue=1000)
 ts_img_batch, ts_label_batch = tf.train.shuffle_batch([ts_img, ts_label],batch_size=50,capacity=750,min_after_dequeue=100)
 #tr_num=7520, ts_num=774
 
