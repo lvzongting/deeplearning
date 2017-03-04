@@ -4,6 +4,10 @@
 + 代码[http://www.cs.toronto.edu/~guerzhoy/tf_alexnet/myalexnet.py]
 + 模型参数 bvlc_alexnet.npy[https://drive.google.com/open?id=0B7Wy478uBsx8eTI4OTVOeGxtcVE]
 
+## better representation
++ Deep Image Retrieval: Learning global representations for image search [https://arxiv.org/pdf/1604.01325.pdf]
+
+
 ## RNN & lstm 网络
 + 手写数字识别[lstm_mnist_28x28x10.py]
 + Caltech101分类-灰度[lstm_caltech_227x227x101L.py]
