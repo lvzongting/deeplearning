@@ -1,6 +1,7 @@
 import tensorflow as tf
 from utils.load_tfrecords_227x227x3 import *
 W  = '\033[0m'  # white (normal)
+R  = '\033[31m' # red 
 G  = '\033[32m' # green
 O  = '\033[33m' # orange
 #f1 = open("train.log","a")
@@ -8,7 +9,8 @@ import signal,sys
 def signal_handler(signal, frame):
     try:
         print('You pressed Ctrl+C!Saving model...')
-        saver.save(sess, 'model/'+__file__[:-3],global_step=step)
+        #saver.save(sess, 'model/'+__file__[:-3],global_step=step)
+        saver.save(sess, 'model/'+__file__[:-3])
         print(str(step)+'Done!')
     except: 
         print('No model to save!')
@@ -21,8 +23,8 @@ Y_= tf.one_hot(tf.cast(Y,tf.int32),101)
 
 #.conv1(11, 11, 96, 4, 4, padding='VALID')
 #kernel_h=11;kernel_w=11;conv_out=96;strides_h=4;strides_w=4
-w_conv1 = tf.Variable(tf.truncated_normal([11,11,3,10],stddev=0.01))
-b_conv1 = tf.Variable(tf.constant(0.01,shape=[10]))
+w_conv1 = tf.Variable(tf.truncated_normal([11,11,3,4],stddev=0.01))
+b_conv1 = tf.Variable(tf.constant(0.01,shape=[4]))
 conv1   = tf.nn.relu(tf.nn.conv2d(X, w_conv1, strides=[1,4,4,1],padding='VALID')+b_conv1)
 #conv1.get_shape()=[None,55,55,96]
 
@@ -33,22 +35,38 @@ norm1   = tf.nn.local_response_normalization(conv1,depth_radius=2,alpha=2e-05,be
 
 #.max_pool(3, 3, 2, 2, padding='VALID', name='pool1')
 #kernel_h=3;kernel_w=3;strides_h=2;strides_w=2
-pool1   = tf.nn.max_pool(norm1,ksize=[1,3,3,1],strides=[1,2,2,1],padding='VALID')
+pool1   = tf.nn.max_pool(norm1,ksize=[1,3,3,1],strides=[1,3,3,1],padding='VALID')
 #pool1.get_shape()=[None,27,27,96]
 
-fc0_batch= tf.reshape(pool1,[-1,27,27*10])
-
-cell_fw  = tf.nn.rnn_cell.BasicLSTMCell(270,forget_bias=1)
-cell_bw  = tf.nn.rnn_cell.BasicLSTMCell(270,forget_bias=1)
+fc0_batch= tf.reshape(pool1,[-1,18,18*4])
 
 x_biLSTM = tf.unpack(fc0_batch,axis=1)
-biLSTM   = tf.nn.bidirectional_rnn(cell_fw, cell_bw, x_biLSTM, dtype=tf.float32)
+cell_fw  = tf.nn.rnn_cell.BasicLSTMCell(72,forget_bias=1)
+cell_bw  = tf.nn.rnn_cell.BasicLSTMCell(72,forget_bias=1)
+biLSTM   = tf.nn.bidirectional_rnn(cell_fw, cell_bw, x_biLSTM, dtype=tf.float32, scope='1')
+
+x_biLSTM2= biLSTM[0]
+cell_fw2 = tf.nn.rnn_cell.BasicLSTMCell(144,forget_bias=1)
+cell_bw2 = tf.nn.rnn_cell.BasicLSTMCell(144,forget_bias=1)
+biLSTM2  = tf.nn.bidirectional_rnn(cell_fw2, cell_bw2, x_biLSTM2, dtype=tf.float32, scope='2')
+
+x_biLSTM3= biLSTM2[0]
+cell_fw3 = tf.nn.rnn_cell.BasicLSTMCell(288,forget_bias=1)
+cell_bw3 = tf.nn.rnn_cell.BasicLSTMCell(288,forget_bias=1)
+biLSTM3  = tf.nn.bidirectional_rnn(cell_fw3, cell_bw3, x_biLSTM3, dtype=tf.float32, scope='3')
+
+x_biLSTM4= biLSTM3[0]
+cell_fw4 = tf.nn.rnn_cell.BasicLSTMCell(576,forget_bias=1)
+cell_bw4 = tf.nn.rnn_cell.BasicLSTMCell(576,forget_bias=1)
+biLSTM4  = tf.nn.bidirectional_rnn(cell_fw4, cell_bw4, x_biLSTM4, dtype=tf.float32, scope='4')
+
 
 
 #biLSTM[0][-1].shape = [?,56]
-w_fc2    = tf.Variable(tf.random_normal([540,101],stddev=0.01))
+w_fc2    = tf.Variable(tf.random_normal([1152,101],stddev=0.01))
 b_fc2    = tf.Variable(tf.constant(0.01,shape=[101]))
-y        = tf.matmul(biLSTM[0][-1],w_fc2) + b_fc2
+#        = tf.matmul(biLSTM[0][-1],w_fc2) + b_fc2
+y        = tf.matmul(biLSTM4[0][-1],w_fc2) + b_fc2
 y_       = tf.nn.softmax(y)
 
 cross_entropy = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=y,labels=Y_))    
@@ -86,12 +104,12 @@ for step in range(25000):
         for num_test in range(14):
             ts_batch = sess.run([ts_img_batch, ts_label_batch])
             ts_accs.append(sess.run(accuracy,feed_dict={X:ts_batch[0],Y:ts_batch[1]}))
-        ts_acc = sum(ts_accs, 0.0) / len(ts_accs)
-        s1 = O+str(step)+':loss:  '+str(loss  )+W
-        s2 = W+str(step)+':tr_acc:'+str(tr_acc)+W
+        ts_acc = round(sum(ts_accs, 0.0) / len(ts_accs),4)
+        s1 = R+str(step)+':loss:  '+str(loss  )+W
+        s2 = O+str(step)+':tr_acc:'+str(tr_acc)+W
         s3 = G+str(step)+':ts_acc:'+str(ts_acc)+W
         print s1,s2,s3
-        print ts_accs
+        print [round(acc,3) for acc in ts_accs]        
         #f1.write(s1+s2+s3+'\n')
         #f1.flush()
 saver.save(sess, 'model/'+__file__[:-3],global_step=step)
