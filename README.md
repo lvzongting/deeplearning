@@ -6,7 +6,8 @@
 
 ## better representation
 + Deep Image Retrieval: Learning global representations for image search [https://arxiv.org/pdf/1604.01325.pdf]
-
++ Learning from Small Sample Sets by Combining Unsupervised Meta-Training with CNNs
+[https://papers.nips.cc/paper/6408-learning-from-small-sample-sets-by-combining-unsupervised-meta-training-with-cnns]
 
 ## RNN & lstm 网络
 + 手写数字识别[lstm_mnist_28x28x10.py]
